@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fade In Animation */
+@keyframes fadeInStart {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeInStart 0.6s ease-out forwards;
+}
+
+/* Accordion Expand Animation */
+@keyframes accordionExpand {
+  0% { opacity: 0; max-height: 0; }
+  100% { opacity: 1; max-height: 1000px; }
+}
+.animate-accordionExpand {
+  animation: accordionExpand 0.5s ease-out forwards;
+}
